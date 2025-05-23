@@ -29,7 +29,10 @@
 
       nixos = pkgs.nixos configuration;
 
-      img = nixos.diskImage;
+      img = nixos.diskImage.overrideAttrs (_oldAttrs: {
+        __structuredAttrs = true;
+        unsafeDiscardReferences.out = true;
+      });
     in {
       packages.${system}.default = img;
     };
