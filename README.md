@@ -17,7 +17,7 @@ result
 I would like to `nix copy` the result to another system.
 
 The reason for `nix copy` is that I'm building the image on
-nixbuild.net and I would like to get the image to my local machine /
+https://nixbuild.net and I would like to get the image to my local machine /
 GitHub runner so I'll need to use the method described in:
 https://docs.nixbuild.net/remote-builds/#retrieving-build-output-from-remote-stores
 
@@ -66,5 +66,5 @@ Since the `nixos.img.zst` is a standalone image, i.e. it contains its
 own /nix/store, it shouldn't need to depend on anything in my
 /nix/store.
 
-Is there a way to "erase" these dependenies such that a `nix copy` only
-has to copy the final image and not all those dependencies?
+**Is there a way to "erase" these dependenies such that a `nix copy` only
+has to copy the final image and not all those dependencies?**
