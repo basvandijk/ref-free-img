@@ -29,7 +29,7 @@
 
       nixos = pkgs.nixos configuration;
 
-      img = nixos.diskImage.overrideAttrs (_oldAttrs: {
+      img = pkgs.lib.overrideDerivation nixos.diskImage (_oldAttrs: {
         __structuredAttrs = true;
         unsafeDiscardReferences.out = true;
       });
